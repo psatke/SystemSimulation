@@ -24,6 +24,12 @@ jobs:
         run: |
           jupyter-book build .
 
+      - name: list directory
+        run: |
+          import os
+          cwd = os.getcwd()
+          print(os.listdir(cwd))
+
       - name: github pages
         uses: peaceiris/actions-gh-pages@v3
         with:
