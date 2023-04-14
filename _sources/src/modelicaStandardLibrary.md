@@ -194,4 +194,4 @@ end RaumOOP;
 ```````
 
 Neben der rein textbasierten Modellierung, bietet SimulationX eine **graphische Benutzeroberfläche**, die genutzt werden kann, um Objekte zu instanziieren,
-Verbindungen zu erstellen und Parameter zu ändern. Test
+Verbindungen zu erstellen und Parameter zu ändern. Die Abkühlung des Raumes wird im Folgenden graphisch modelliert. Vergleicht man den entstehenden Quellcode der graphischen Modellierung mit der vorherigen objektorientierten Lösung, fallen die zusätzlichen ´annotations´ auf. Diese beschreiben die Position der graphischen Representation der Objekte.
