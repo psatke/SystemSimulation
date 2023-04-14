@@ -608,7 +608,39 @@ Lösung: OOP</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <p>Neben der rein textbasierten Modellierung, bietet SimulationX eine <strong>graphische Benutzeroberfläche</strong>, die genutzt werden kann, um Objekte zu instanziieren,
-Verbindungen zu erstellen und Parameter zu ändern. Die Abkühlung des Raumes wird im Folgenden graphisch modelliert. Vergleicht man den entstehenden Quellcode der graphischen Modellierung mit der vorherigen objektorientierten Lösung, fallen die zusätzlichen ´annotations´ auf. Diese beschreiben die Position der graphischen Representation der Objekte.</p>
+Verbindungen zu erstellen und Parameter zu ändern. Die Abkühlung des Raumes wird im Folgenden graphisch modelliert. Vergleicht man den entstehenden Quellcode der graphischen Modellierung mit der vorherigen objektorientierten Lösung, fallen die zusätzlichen <code class="docutils literal notranslate"><span class="pre">annotations</span></code> auf. Diese beschreiben die Position der graphischen Darstellung der Objekte.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Lösung: Graphisch</label><div class="sd-tab-content docutils">
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/AbkuehlungRaumGraphisch.png"><img alt="../_images/AbkuehlungRaumGraphisch.png" src="../_images/AbkuehlungRaumGraphisch.png" style="width: 550px;" /></a>
+</figure>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Erinnerung: Modelica Modell</label><div class="sd-tab-content docutils">
+<div class="highlight-modelica notranslate"><div class="highlight"><pre><span></span><span class="kr">model</span> <span class="nc">RaumGraphisch</span>
+	<span class="kr">extends</span> <span class="n">SimModel</span><span class="p">(</span><span class="n">tStop</span><span class="o">=</span><span class="mi">86400</span><span class="p">);</span>
+	<span class="n">Modelica</span><span class="o">.</span><span class="n">Thermal</span><span class="o">.</span><span class="n">HeatTransfer</span><span class="o">.</span><span class="n">Components</span><span class="o">.</span><span class="n">HeatCapacitor</span> <span class="n">thermischeMasse</span><span class="p">(</span>
+		<span class="n">C</span><span class="o">=</span><span class="mi">78000</span><span class="p">,</span>
+		<span class="n">T</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mf">294.15</span><span class="p">))</span> <span class="kr">annotation</span><span class="p">(</span><span class="n">Placement</span><span class="p">(</span><span class="n">transformation</span><span class="p">(</span><span class="n">extent</span><span class="o">=</span><span class="p">{{</span><span class="o">-</span><span class="mi">120</span><span class="p">,</span><span class="mi">65</span><span class="p">},{</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="mi">85</span><span class="p">}})));</span>
+	<span class="n">Modelica</span><span class="o">.</span><span class="n">Thermal</span><span class="o">.</span><span class="n">HeatTransfer</span><span class="o">.</span><span class="n">Components</span><span class="o">.</span><span class="n">ThermalConductor</span> <span class="n">konduktion</span><span class="p">(</span><span class="n">G</span><span class="o">=</span><span class="mf">9.1</span><span class="p">)</span> <span class="kr">annotation</span><span class="p">(</span><span class="n">Placement</span><span class="p">(</span><span class="n">transformation</span><span class="p">(</span><span class="n">extent</span><span class="o">=</span><span class="p">{{</span><span class="o">-</span><span class="mi">85</span><span class="p">,</span><span class="mi">45</span><span class="p">},{</span><span class="o">-</span><span class="mi">65</span><span class="p">,</span><span class="mi">65</span><span class="p">}})));</span>
+	<span class="n">Modelica</span><span class="o">.</span><span class="n">Thermal</span><span class="o">.</span><span class="n">HeatTransfer</span><span class="o">.</span><span class="n">Sources</span><span class="o">.</span><span class="n">FixedTemperature</span> <span class="n">festeTemperatur</span><span class="p">(</span><span class="n">T</span><span class="o">=</span><span class="mf">273.15</span><span class="p">)</span> <span class="kr">annotation</span><span class="p">(</span><span class="n">Placement</span><span class="p">(</span><span class="n">transformation</span><span class="p">(</span><span class="n">extent</span><span class="o">=</span><span class="p">{{</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span><span class="mi">45</span><span class="p">},{</span><span class="o">-</span><span class="mi">35</span><span class="p">,</span><span class="mi">65</span><span class="p">}})));</span>
+	<span class="kr">equation</span>
+		<span class="kr">connect</span><span class="p">(</span><span class="n">konduktion</span><span class="o">.</span><span class="n">port_a</span><span class="p">,</span><span class="n">thermischeMasse</span><span class="o">.</span><span class="n">port</span><span class="p">)</span> <span class="kr">annotation</span><span class="p">(</span><span class="n">Line</span><span class="p">(</span>
+			<span class="n">points</span><span class="o">=</span><span class="p">{{</span><span class="o">-</span><span class="mi">85</span><span class="p">,</span><span class="mi">55</span><span class="p">},{</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span><span class="mi">55</span><span class="p">},{</span><span class="o">-</span><span class="mi">110</span><span class="p">,</span><span class="mi">55</span><span class="p">},{</span><span class="o">-</span><span class="mi">110</span><span class="p">,</span><span class="mi">60</span><span class="p">},{</span><span class="o">-</span><span class="mi">110</span><span class="p">,</span><span class="mi">65</span><span class="p">}},</span>
+			<span class="n">color</span><span class="o">=</span><span class="p">{</span><span class="mi">191</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span>
+			<span class="n">thickness</span><span class="o">=</span><span class="mf">0.0625</span><span class="p">));</span>
+		<span class="kr">connect</span><span class="p">(</span><span class="n">festeTemperatur</span><span class="o">.</span><span class="n">port</span><span class="p">,</span><span class="n">konduktion</span><span class="o">.</span><span class="n">port_b</span><span class="p">)</span> <span class="kr">annotation</span><span class="p">(</span><span class="n">Line</span><span class="p">(</span>
+			<span class="n">points</span><span class="o">=</span><span class="p">{{</span><span class="o">-</span><span class="mi">35</span><span class="p">,</span><span class="mi">55</span><span class="p">},{</span><span class="o">-</span><span class="mi">40</span><span class="p">,</span><span class="mi">55</span><span class="p">},{</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span><span class="mi">55</span><span class="p">},{</span><span class="o">-</span><span class="mi">65</span><span class="p">,</span><span class="mi">55</span><span class="p">}},</span>
+			<span class="n">color</span><span class="o">=</span><span class="p">{</span><span class="mi">191</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span>
+			<span class="n">thickness</span><span class="o">=</span><span class="mf">0.0625</span><span class="p">));</span>
+<span class="kr">end</span> <span class="nc">RaumGraphisch</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 

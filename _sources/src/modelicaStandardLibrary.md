@@ -194,4 +194,33 @@ end RaumOOP;
 ```````
 
 Neben der rein textbasierten Modellierung, bietet SimulationX eine **graphische Benutzeroberfläche**, die genutzt werden kann, um Objekte zu instanziieren,
-Verbindungen zu erstellen und Parameter zu ändern. Die Abkühlung des Raumes wird im Folgenden graphisch modelliert. Vergleicht man den entstehenden Quellcode der graphischen Modellierung mit der vorherigen objektorientierten Lösung, fallen die zusätzlichen ´annotations´ auf. Diese beschreiben die Position der graphischen Representation der Objekte.
+Verbindungen zu erstellen und Parameter zu ändern. Die Abkühlung des Raumes wird im Folgenden graphisch modelliert. Vergleicht man den entstehenden Quellcode der graphischen Modellierung mit der vorherigen objektorientierten Lösung, fallen die zusätzlichen `annotations` auf. Diese beschreiben die Position der graphischen Darstellung der Objekte.
+
+```````{tab-set}
+````{tab-item} Lösung: Graphisch
+```{figure} ../data/img/AbkuehlungRaumGraphisch.png
+:width: 550px
+```
+````
+````{tab-item} Erinnerung: Modelica Modell
+```modelica
+model RaumGraphisch
+	extends SimModel(tStop=86400);
+	Modelica.Thermal.HeatTransfer.Components.HeatCapacitor thermischeMasse(
+		C=78000,
+		T(start=294.15)) annotation(Placement(transformation(extent={{-120,65},{-100,85}})));
+	Modelica.Thermal.HeatTransfer.Components.ThermalConductor konduktion(G=9.1) annotation(Placement(transformation(extent={{-85,45},{-65,65}})));
+	Modelica.Thermal.HeatTransfer.Sources.FixedTemperature festeTemperatur(T=273.15) annotation(Placement(transformation(extent={{-15,45},{-35,65}})));
+	equation
+		connect(konduktion.port_a,thermischeMasse.port) annotation(Line(
+			points={{-85,55},{-90,55},{-110,55},{-110,60},{-110,65}},
+			color={191,0,0},
+			thickness=0.0625));
+		connect(festeTemperatur.port,konduktion.port_b) annotation(Line(
+			points={{-35,55},{-40,55},{-60,55},{-65,55}},
+			color={191,0,0},
+			thickness=0.0625));
+end RaumGraphisch;
+```
+````
+```````
