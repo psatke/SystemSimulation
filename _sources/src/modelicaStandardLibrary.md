@@ -226,4 +226,6 @@ end RaumGraphisch;
 ```````
 
 Mögliche Aufgaben zur graphischen Modellierung:
- - Erweitern Sie das bisherige Modell um die thermische Kapazität der Wand
+ - Erweitern Sie das bisherige Modell um die thermische Kapazität der Wand (aufgeteilt in Mauerwerk und Dämmung)
+ - Erweitern Sie ihr Modell für Fensterflächen (ohne Strahlung)
+ - Ergänzen Sie eine Innere Wärmequelle (eine Person ca. 80W)
