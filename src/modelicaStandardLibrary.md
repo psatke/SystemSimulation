@@ -202,7 +202,7 @@ Verbindungen zu erstellen und Parameter zu ändern. Die Abkühlung des Raumes wi
 :width: 550px
 ```
 ````
-````{tab-item} Erinnerung: Modelica Modell
+````{tab-item} Quellcode: Graphisch
 ```modelica
 model RaumGraphisch
 	extends SimModel(tStop=86400);
@@ -224,3 +224,6 @@ end RaumGraphisch;
 ```
 ````
 ```````
+
+Mögliche Aufgaben zur graphischen Modellierung:
+ - Erweitern Sie das bisherige Modell um die thermische Kapazität der Wand
