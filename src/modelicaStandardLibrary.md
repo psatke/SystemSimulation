@@ -194,4 +194,4 @@ end RaumOOP;
 ```````
 
 Neben der rein textbasierten Modellierung, bietet SimulationX eine **graphische Benutzeroberfläche**, die genutzt werden kann, um Objekte zu instanziieren,
-Verbindungen zu erstellen und Parameter zu ändern.
+Verbindungen zu erstellen und Parameter zu ändern. Test
