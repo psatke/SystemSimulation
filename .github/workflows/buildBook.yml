@@ -10,8 +10,10 @@ jobs:
     name: build and publish
     runs-on: ubuntu-latest
     steps:
-      - name: setup python
+      - name: checkout repository
         uses: actions/checkout@v3
+
+      - name: setup python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
