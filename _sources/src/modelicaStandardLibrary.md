@@ -236,7 +236,7 @@ Um die Anfangstemperatur der thermischen Masse zu definieren, muss in die Textan
 
 3. Erweitern Sie das bisherige graphische Modell um die thermische Masse der Wand. Ändern Sie dafür den bisherigen Wandaufbau zu einer Kombination aus Mauerwerk und Dämmung.
 ```{figure} ../data/img/Wandaufbau.png
-:width: 300px
+:width: 200px
 ```
 
 Mögliche Aufgaben zur graphischen Modellierung:
