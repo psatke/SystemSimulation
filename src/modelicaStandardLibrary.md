@@ -230,15 +230,14 @@ Um die Anfangstemperatur der thermischen Masse zu definieren, muss in die Textan
 
 ## Aufgaben zur Modelica Standard Library
 
-1. Finden Sie die Zusammenhänge zwischen unserer bisherigen Modellierung des Raums und den neuen Parametern 
-    * `thermischeMasse.C` und 
-    * `konduktion.G`.
-  Nutzen Sie dafür die Klassendefinitionen der Modelica Standard Library.
+1. Finden Sie die Zusammenhänge zwischen unserer bisherigen Modellierung des Raums und den neuen Parametern `thermischeMasse.C` und `konduktion.G`. Nutzen Sie dafür die Klassendefinitionen der Modelica Standard Library.
 
 2. Welche formale Bedeutung hat das Verbinden von den Anschlüssen der Objekte? Schauen Sie dafür in die Deklaration des Connectors.
 
-3. Erweitern Sie das bisherige graphische Modell um die thermische Masse der Wand.
-
+3. Erweitern Sie das bisherige graphische Modell um die thermische Masse der Wand. Ändern Sie dafür den bisherigen Wandaufbau zu einer Kombination aus Mauerwerk und Dämmung.
+```{figure} ../data/img/Wandaufbau.png
+:width: 300px
+```
 
 Mögliche Aufgaben zur graphischen Modellierung:
  - Erweitern Sie das bisherige Modell um die thermische Kapazität der Wand (aufgeteilt in Mauerwerk und Dämmung)
