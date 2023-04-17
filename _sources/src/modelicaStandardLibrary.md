@@ -224,6 +224,18 @@ end RaumGraphisch;
 ```
 ````
 ```````
+```{admonition} Hinweis
+Um die Anfangstemperatur der thermischen Masse zu definieren, muss in die Textansicht gewechselt werden. Hier kann die Anfangstemperatur durch `T(start=294.15)` ergänzt werden. Die graphische Benutzeroberfläche von SimulationX ermöglicht lediglich die Änderung von Parametern, von Objekten, die direkt initialisiert werden.
+```
+
+## Aufgaben zur Modelica Standard Library
+
+1. Finden Sie die Zusammenhänge zwischen unserer bisherigen Modellierung des Raums und den neuen Parametern `C` und `G`. Nutzen Sie dafür die Klassendefinitionen der Modelica Standard Library.
+
+2. Welche formale Bedeutung hat das Verbinden von den Anschlüssen der Objekte? Schauen Sie dafür in die Deklaration des Connectors.
+
+3. Erweitern Sie das bisherige graphische Modell um die thermische Masse der Wand.
+
 
 Mögliche Aufgaben zur graphischen Modellierung:
  - Erweitern Sie das bisherige Modell um die thermische Kapazität der Wand (aufgeteilt in Mauerwerk und Dämmung)
