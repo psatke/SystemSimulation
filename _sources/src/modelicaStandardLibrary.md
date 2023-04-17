@@ -230,7 +230,10 @@ Um die Anfangstemperatur der thermischen Masse zu definieren, muss in die Textan
 
 ## Aufgaben zur Modelica Standard Library
 
-1. Finden Sie die Zusammenhänge zwischen unserer bisherigen Modellierung des Raums und den neuen Parametern `C` und `G`. Nutzen Sie dafür die Klassendefinitionen der Modelica Standard Library.
+1. Finden Sie die Zusammenhänge zwischen unserer bisherigen Modellierung des Raums und den neuen Parametern 
+  - `thermischeMasse.C` und 
+  - `konduktion.G`.
+  Nutzen Sie dafür die Klassendefinitionen der Modelica Standard Library.
 
 2. Welche formale Bedeutung hat das Verbinden von den Anschlüssen der Objekte? Schauen Sie dafür in die Deklaration des Connectors.
 
