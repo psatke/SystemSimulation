@@ -234,12 +234,38 @@ Um die Anfangstemperatur der thermischen Masse zu definieren, muss in die Textan
 
 2. Welche formale Bedeutung hat das Verbinden von den Anschlüssen der Objekte? Schauen Sie dafür in die Deklaration des Connectors.
 
-3. Erweitern Sie das bisherige graphische Modell um die thermische Masse der Wand. Ändern Sie dafür den bisherigen Wandaufbau zu einer Kombination aus Mauerwerk und Dämmung.
+3. Erweitern Sie das bisherige graphische Modell um die thermische Masse der Wand. Ändern Sie dafür den bisherigen Wandaufbau zu einer Kombination aus Mauerwerk und Dämmung. Wie interpretieren Sie die resultierenden Wärmeströme und Temperaturen?
+``````{grid}
+````{grid-item}
 ```{figure} ../data/img/Wandaufbau.png
-:width: 200px
+:width: 300px
 ```
+````
+````{grid-item}
+```{list-table}
+:header-rows: 1
 
-Mögliche Aufgaben zur graphischen Modellierung:
- - Erweitern Sie das bisherige Modell um die thermische Kapazität der Wand (aufgeteilt in Mauerwerk und Dämmung)
- - Erweitern Sie ihr Modell für Fensterflächen (ohne Strahlung)
- - Ergänzen Sie eine Innere Wärmequelle (eine Person ca. 80W)
+* - Symbol
+  - Einheit
+  - Mauerwerk
+  - Dämmung
+* - $c$
+  - J/(kg.K)
+  - 836 
+  - 920
+* - $\rho$
+  - kg/m<sup>3</sup>
+  - 1400
+  - 200
+* - $k$
+  - W/(m.K)
+  - 0,058
+  - 0,035
+```
+````
+``````
+4. Vergrößern Sie ihr Wandmodell um die Transmissionsverluste eines 3 m<sup>2</sup> großen Fensters ($G =\,$ 2,4 W/K) in der Wand. Wie verändern sich die Wärmeströme?
+
+5. Welche Leistung bräuchten Sie ungefähr, um die Anfangstemperatur zu halten?
+
+## Variable Randbedingungen
